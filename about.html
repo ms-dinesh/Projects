@@ -1,45 +1,298 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>nav bar</title>
-<style type="text/css">
-*{
-margin: 0;
-padding: 0;
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-}
-ul{
-list-style-type: none;
-justify-content: flex-end;
-display: flex;
-margin: 2px;
-padding: 5px;
-background-color: black;
-}
-a{
-text-decoration: none;
-margin: 2px;
-padding: 5px;
-color: white;
-}
-.active{
-color: black;
-background-color: white;
-margin:3px;
-border: 2px;
-padding: 3px;
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mate+SC&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <title>about page</title>
+    
+    <style type="text/css">
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    span {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    }
+    span:hover{
+    color: black;
+    }
+    ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    }
+    ul li a::after{
+    content: '';
+    display: inline-block;
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    margin: 2px;
+    transition: 1s;
+    }
+    ul li a:hover::after{
+    width: 100%;
+    }
+   
+    img{
+    
+    height: 40px;
+    width: 40px;
+    }
+    nav{
+    border-bottom: 1px solid gray;
+    }
+    .card-footer{
+    background-color: gray;
+    color: white;
+    }
+    .card-footer ,small{
+    font-family: 'Brush Script MT', cursive;
+    text-align: center;
+    justify-content: center;
+    }
+    .main{
+    background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(/storage/emulated/0/fly-a-far/pics/bg3.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    border-bottom: 0.5px solid black;
+    
+    }
+    h6{
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+    padding-top: 160px;
+    }
+    .jumbotron{
+    margin-top: 4px;
+    }
+    #box {
+    padding-top: 60px;
+    padding-right: 50px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 3px;
+    box-shadow: -2px 1px 3px 2px #f44336;
+    }
+    .fa fa-podcast{
+    size: 50px;
+    }
+    h2{
+    text-shadow: 1px 1px 2px gray;
+    color: #f44336;
+    text-align: left;
+    margin-bottom: 0px;
+    border: 10px;
+    }
+    h5{
+   
+    margin-bottom: 100px;
+    margin-left: 3px;
+    }
+    p{
+    letter-spacing: 1px;
+    margin-left: 5px;
+    padding: 2px;
+    }
+    .social-links{
+    display: flex;
+    justify-content: space-around;
+    }    
+    
+    .social-links a{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 8px;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+    }
+    .social-links a .fa{
+    font-size: 35px;
+    line-height: 85px;
+    transition: color 0.5s;
+    z-index: 10;
+    position: relative;
+    }
+    .social-links a::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: -90px;
+    left: 0;
+    background: linear-gradient(rgba(248,0,0,0.8),rgba(248,0,0,0.8));
+    
+    position: absolute;
+    transition: 0.5s;
+    }
+    .social-links a:hover::after{
+    top: 0;
+    
+    }
+    .social-links a:hover .fa{
+    color: #fff;
+    }
+    #d p{
+    text-align: center;
+    }
+    
+    
+    
+    
+@media(max-width: 700px){
+    
+    .main{
+    background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(/storage/emulated/0/fly-a-far/pics/bg3.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 30vh;
+    width: 100%;
+    border-bottom: 0.5px solid black;
+    }
+    h6{
+    padding-top: 100px;
+    }
 
+    img{
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    margin-bottom: 2px;
+    }
+    .navbar-toggler-icon{
+    color: #fff;
+    }
+    a .navlink{
+    color: #f44336;
+    background-color: white;
+    }
 }
-</style>
-</head>
-<body>
-	<ul>
-	<li><a href="home.html" > Home </a></li>
-	<li><a class="active" href="about.html" > About </a></li>
-	<li><a href="stream.html" > Stream </a></li>
-	<li><a href="contact.html" > Contact us </a></li>
-	<li><a href="pics.html" > Gallary </a></li>
-	</ul>
-	
-</body>
+    </style>
+  </head>
+  <body class="bg-light">
+      <!--nav bar-->
+<section class="header">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+      <img src="/storage/emulated/0/fly-a-far/pics/logo.gif">
+      <span>fly-a-far</span>
+      </a>
+      <!--Hamburger icon-->
+      <button class="navbar-toggler navbar-toggler-md navbar-toggler-sm ml-auto " type="button" data-toggle="collapse" data-target="#ms" >
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="ms">
+      <!-- list items -->
+      <ul class="navbar-nav ml-auto">
+      <li class="nav-item ml-auto"> <a class="nav-link" href="flyafar.html" >Home</a> </li>
+      <li class="nav-item ml-auto"> <a class="nav-link active" href="about.html" >About</a> </li>
+      <li class="nav-item ml-auto"> <a class="nav-link" href="#" >Services</a>  </li>
+      <li class="nav-item ml-auto"> <a class="nav-link" href="#" >Contact us</a>  </li>
+      <li class="nav-item ml-auto"> <a class="nav-link" href="#" >Reviews</a>  </li>
+      </ul>
+      </div>    
+   </nav>
+</section>
+      <!-- caption -->
+<div class="main">
+  <h6>The Place Where Your Dreams Come True</h6>  
+</div>
+     <!-- Grid model -->
+<div class="jumbotron">
+ <div class="container bg-light">
+    <div class="row">
+      <div class="col-md py-4">
+       <div id="box" class="container">
+        <i class="fa fa-wpexplorer" aria-hidden="true"></i>
+        <h2>Who</h2>
+        <h5>We are</h5>
+       </div>
+      </div>
+      <div class="col-md py-4">
+       <div class="row">
+       <p>
+       <i class="fa fa-superpowers" aria-hidden="true"></i>
+       We are one of the finest International traveling agency in the Country.
+       We offer most valuable services on demand.</p>
+        </div>
+        <div class="row">  
+          <p><i class="fa fa-hourglass-half" aria-hidden="true"></i>
+           Far-a-Fly, was established in 2014. Head office located in Pune.
+           Branches are in Bangalore, Hyderabad , Mumbai. We are always happy to service our customers.
+           from the beginning to now we are high in sky</p>
+       </div>
+      </div>
+    </div>
+    <div class="row">
+     <div class="col-md py-4 ">
+      <div id="box" class="container">
+      <i class="fa fa-handshake-o" aria-hidden="true"></i>
+       <h2>What</h2>
+       <h5>We do</h5>
+      </div>
+     </div>
+    <div class="col-md py-4">
+       <div class="row">
+        <p><i class="fa fa-globe" aria-hidden="true"></i>
+        Traveling-Guide: We provide a travel guide with you, its completely consumer's choice.</p>
+        </div>
+        <div class="row">
+        <p><i class="fa fa-building" aria-hidden="true"></i>
+        Accomodation: Our Agency is connected with international hotels.
+        We are always ahead to service our customers. Cost will be vary based on package.</p>
+        <p><i class="fa fa-gamepad" aria-hidden="true"></i>
+        Playtime: Specially for your kids. Surly they will n'joy through out the trip.</p>
+        </div>
+     </div>
+    </div>
+ </div>
+</div>
+
+    <!-- footer -->
+
+<div id="d" class="jumbotron">
+   <p>follow us</p>
+   <div class="social-links">
+   
+   <a href="#" ><i class="fa fa-facebook"></i></a>
+   <a href="#" ><i class="fa fa-twitter"></i></a>
+   <a href="#" ><i class="fa fa-youtube-play"></i></a>
+   <a href="#" ><i class="fa fa-instagram"></i></a>
+   
+   </div>
+</div>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
 </html>
